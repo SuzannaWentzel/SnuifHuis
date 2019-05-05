@@ -30,8 +30,6 @@
     methods: {
       showNav() {
         let nav = document.getElementById("nav");
-        console.log("clicked burger!");
-        console.log(nav.className);
 
         if (nav.className === "") {
           nav.className += "responsive";
@@ -50,6 +48,10 @@
   }
 
   @media screen and (max-width: 600px){
+    html {
+      font-size: 12px;
+    }
+
     #nav {
       z-index: 1000;
       height: 60px;
@@ -99,6 +101,10 @@
   }
 
   @media screen and (min-width: 601px){
+    html {
+      font-size: 16px;
+    }
+
     #nav {
       height: 60px;
       margin-top: 55vh;
