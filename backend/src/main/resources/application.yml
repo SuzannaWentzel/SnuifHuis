@@ -1,0 +1,17 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://${POSTGRES_HOST:localhost}/snuifhuis
+        username: snuifhuis
+        password: snuifhuis
+    jpa:
+        hibernate:
+            ddl-auto: validate
+        properties:
+            hibernate:
+                default_schema: snuifhuis
+                jdbc:
+                    lob:
+                        non_contextual_creation: true
+    flyway:
+        enabled: true
+        schemas: snuifhuis
