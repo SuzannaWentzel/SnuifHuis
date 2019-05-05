@@ -17,7 +17,7 @@
         <router-link to="/">TITELS</router-link>
       </div>
       <div class="burger">
-        <i class="fas fa-hamburger" onclick="showNav()"></i>
+        <i class="fas fa-hamburger" @click="showNav()"></i>
       </div>
     </div>
     <router-view />
@@ -29,7 +29,15 @@
     name: "App",
     methods: {
       showNav() {
+        let nav = document.getElementById("nav");
+        console.log("clicked burger!");
+        console.log(nav.className);
 
+        if (nav.className === "") {
+          nav.className += "responsive";
+        } else {
+          nav.className = "";
+        }
       }
     }
   };
@@ -51,6 +59,22 @@
 
       .nav-block:not(:first-child) {
         display: none;
+      }
+    }
+
+    #nav.responsive {
+      .nav-block {
+        float: none;
+        display: block !important;
+        text-align: left;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      .burger {
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
 

@@ -25,7 +25,8 @@ export default {
 
   @media screen and (max-width: 600px){
     .black {
-      padding-top: 30vh;
+      padding-top: 40vh;
+      height: 60vh;
     }
   }
 
